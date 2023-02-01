@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of the Wyvern</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src='http://git.io/perlin.js'></script>
+    </head>
+<body>
+    <audio src="assets/Chalice.mp3" id="Chalice" loop="loop"></audio>
+    <audio src="assets/oecg.mp3" id="oecg"></audio>
+    <audio src="assets/bjlp.mp3" id="bjlp"></audio>
+    <audio src="assets/heij.mp3" id="heij"></audio>
+    <audio src="assets/eysu.mp3" id="eysu"></audio>
+    <audio src="assets/qmru.mp3" id="qmru"></audio>
+    <audio src="assets/nwds.mp3" id="nwds"></audio>
+    <audio src="assets/ykpe.mp3" id="ykpe"></audio>
+
+    
+    <div class="maindiv">
+        <div class="kingdiv vertical-center">
+            <div onClick="playAudio('bjlp')" class="circle bjlp"></div>
+            <div onClick="playAudio('oecg')" class="circle oecg"></div>
+            <div onClick="playAudio('nwds')" class="circle nwds"></div>
+            <div onClick="playAudio('qmru')" class="circle qmru"></div>
+            <div onClick="playAudio('heij')" class="circle heij"></div>
+            <div onClick="playAudio('eysu')" class="circle eysu"></div>
+            <div onClick="playAudio('ykpe')" class="circle ykpe"></div>
+            <a href="assets/Map.png" download>
+                <div class="download">
+                </div>    
+            </a>
+        </div>
+    </div>
+</body>
+
+<script>
+    var audio = document.getElementById("Chalice");
+    audio.volume = 0.10;
+
+    window.onload = function () {
+        document.onclick = function () {
+            document.getElementById("Chalice").play()
+        }
+        document.getElementById("oecg").onclick = function () {
+            console.log("asdasd")
+            document.getElementById("oecg").play()
+        }
+        console.log(document.getElementById("oecg"))
+    }
+
+    function playAudio(arg){
+        console.log(arg)
+       document.getElementById(arg).play();
+     }
+</script>
+</html>

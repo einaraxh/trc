@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Council</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src='http://git.io/perlin.js'></script>
+    </head>
+<body>
+    <audio src="assets/Metalican.mp3" id="Metalican" loop="loop"></audio>
+    
+    <div class="maindiv">
+        <div class="mindiv">
+            <form class="input" method="POST">
+                <input type="text" name="input" style="width:160px"/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="maindiv2"></div>
+</body>
+
+<script>
+    var audio = document.getElementById("Metalican");
+    audio.volume = 0.35;
+
+    window.onload = function () {
+        document.onclick = function () {
+            document.getElementById("Metalican").play()
+        }
+    }
+
+    setInterval(() => {
+
+        let random=perlin.get(Date.now()/3000, 0)
+        random += 0.5
+
+        var csslight = document.querySelector(".maindiv2")
+        csslight.style.setProperty('--t', random);
+    }, 1000/30)
+</script>
+</html>
