@@ -57,34 +57,3 @@ body {
     top: 80%;
 
 }
-
-.countdown {
-    color: white;
-    font-size: 36px;
-
-    position: relative;
-    margin: auto;
-
-    display: flex;
-    justify-content: center;
-
-    z-index: 99;
-}
-
-.time {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.back {
-    position: absolute;
-    float: left;
-    height: min(10vh, 10vw);
-    width: auto;
-    
-    z-index: 99;
-
-    background-image: url("../assets/arrow.png");
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-}
